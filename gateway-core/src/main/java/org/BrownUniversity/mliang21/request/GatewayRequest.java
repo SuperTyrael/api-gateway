@@ -27,8 +27,8 @@ public class GatewayRequest implements IGatewayRequest {
     @Getter
     private final long beginTime;
 
-    @Getter
-    private final long endTime;
+//    @Getter
+//    private final long endTime;
 
     /**
      * Encoding charset
@@ -116,12 +116,42 @@ public class GatewayRequest implements IGatewayRequest {
      */
     private final RequestBuilder requestBuilder;
 
-    public GatewayRequest(String uniqueId, long beginTime, long endTime, Charset charset, String clientIp, String host, String path, String uri, HttpMethod httpMethod, String contentType, HttpHeaders httpHeaders, QueryStringDecoder queryStringDecoder, FullHttpRequest fullHttpRequest, RequestBuilder requestBuilder, HttpMethod method, HttpHeaders headers) {
+//    public GatewayRequest(String uniqueId,long endTime, Charset charset, String clientIp, String host, String path, String uri, String contentType, QueryStringDecoder queryStringDecoder, FullHttpRequest fullHttpRequest, HttpMethod method, HttpHeaders headers) {
+//        this.uniqueId = uniqueId;
+//        this.method = method;
+//        this.headers = headers;
+//        this.beginTime = TimeUtil.currentTimeMillis();
+//        this.endTime = endTime;
+//        this.charset = charset;
+//        this.clientIp = clientIp;
+//        this.contentType = contentType;
+//        //初始化防止报错
+//        this.queryStringDecoder = new QueryStringDecoder(uri,charset);
+//        this.fullHttpRequest = fullHttpRequest;
+//        this.requestBuilder = new RequestBuilder();
+//        this.host = host;
+//        this.path = queryStringDecoder.path();
+//        this.uri = uri;
+//
+//        this.modifyHost = host;
+//        this.modifyPath = path;
+//        this.modifyScheme = BasicConst.HTTP_PREFIX_SEPARATOR;
+//        this.requestBuilder.setMethod(getMethod().name());
+//        this.requestBuilder.setHeaders(getHeaders());
+//        this.requestBuilder.setQueryParams(queryStringDecoder.parameters());
+//
+//        ByteBuf contentBuffer = fullHttpRequest.content();
+//        if(Objects.nonNull(contentBuffer)){
+//            this.requestBuilder.setBody(contentBuffer.nioBuffer());
+//        }
+//    }
+
+    public GatewayRequest(String uniqueId, Charset charset, String clientIp, String host, String uri, HttpMethod method, String contentType, HttpHeaders headers, FullHttpRequest fullHttpRequest) {
         this.uniqueId = uniqueId;
         this.method = method;
         this.headers = headers;
         this.beginTime = TimeUtil.currentTimeMillis();
-        this.endTime = endTime;
+//        this.endTime = endTime;
         this.charset = charset;
         this.clientIp = clientIp;
         this.contentType = contentType;

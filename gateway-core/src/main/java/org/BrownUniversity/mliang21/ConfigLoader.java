@@ -22,6 +22,7 @@ public class ConfigLoader {
     public static ConfigLoader getInstance(){
         return INSTANCE;
     }
+
     private Config config;
 
     public static Config getConfig(){
