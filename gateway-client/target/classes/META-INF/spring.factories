@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+org.brown.mliang21.gateway.client.core.autoconfigure.ApiClientAutoConfiguration

@@ -1,0 +1,22 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "org.brown.mliang21.gateway.client.core.ApiProperties",
+      "name": "api",
+      "type": "org.brown.mliang21.gateway.client.core.ApiProperties"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "org.brown.mliang21.gateway.client.core.ApiProperties",
+      "name": "api.env",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.brown.mliang21.gateway.client.core.ApiProperties",
+      "name": "api.register-address",
+      "type": "java.lang.String"
+    }
+  ]
+}
